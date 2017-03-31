@@ -15,9 +15,9 @@ function init() {
 
 
 	var geometry = new THREE.BoxBufferGeometry( 200, 200, 200 );
-	//var texture = new THREE.TextureLoader().load( 'textures/crate.gif' );
-	//var material = new THREE.MeshBasicMaterial({ map: texture });
-	var material = new THREE.MeshBasicMaterial({ wireframe: true });
+	var texture = new THREE.TextureLoader().load( 'textures/crate.gif' );
+	var material = new THREE.MeshBasicMaterial({ map: texture });
+	//var material = new THREE.MeshBasicMaterial({ wireframe: true });
 
 	mesh = new THREE.Mesh( geometry, material );
 	scene.add( mesh );
