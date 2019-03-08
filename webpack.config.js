@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin') 
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const path = require('path')
 
 module.exports = {
@@ -8,6 +9,9 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   plugins: [
-    new HtmlWebpackPlugin()
+    new HtmlWebpackPlugin(),
+    new CopyWebpackPlugin([
+      { from: 'textures', to: 'textures' }
+    ])
   ]
 };
